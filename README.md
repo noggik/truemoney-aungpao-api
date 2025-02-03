@@ -22,8 +22,8 @@
 ### 🔧 **ขั้นตอนการติดตั้ง**
 1️⃣ **โคลนโปรเจคจาก GitHub**
 ```sh
-git clone https://github.com/your-repo/aungpao-api.git
-cd aungpao-api
+git clone https://github.com/oattydev/truemoney-aungpao-api.git
+cd truemoney-aungpao-api
 ```
 
 2️⃣ **ติดตั้งแพ็คเกจที่จำเป็น**
@@ -52,7 +52,7 @@ npm start
 ## 📌 API Endpoints
 
 ### 🔹 **แลกรับบัตรกำนัล AungPao**
-- **Endpoint:** `POST /api/aungpao`
+- **Endpoint:** `POST /api/aungpao/topup`
 - **ตัวอย่างคำขอ (Request Body):**
   ```json
   {
@@ -78,13 +78,15 @@ npm start
 
 ## 📁 โครงสร้างโครงการ
 ```bash
-📦 aungpao-api
+📦 truemoney-aungpao-api
+├── 📂 controller
+│   ├── wallet.js         # coltroller สำหรับ อั่งเปา
 ├── 📂 routes
 │   ├── wallet.js         # API สำหรับแลกรับบัตรกำนัล AungPao
 ├── 📂 utils
 │   ├── wallet.js         # ฟังก์ชันสำหรับประมวลผลบัตรกำนัล
 ├── .env                  # ตัวแปรแวดล้อม
-├── server.js             # ไฟล์เซิร์ฟเวอร์หลักของ Express
+├── index.js              # ไฟล์เซิร์ฟเวอร์หลักของ Express
 ├── package.json          # รายละเอียดโครงการและ dependencies
 ├── README.md             # เอกสารประกอบโครงการ
 ```
