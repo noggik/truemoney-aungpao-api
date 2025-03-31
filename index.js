@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const AungPaoRoutes = require('./routes/wallet')
-const port = process.env.PORT || 8801
+const port = process.env.PORT || 8800
 
 const corsOptions = {
     origin: '*', // Specify allowed origin(s)
