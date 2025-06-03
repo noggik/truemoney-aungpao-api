@@ -5,8 +5,8 @@ require('dotenv').config()
 // aungPaoCode = "https://gift.truemoney.com/campaign/?v=018f87a62de97634b9322cf45**********"
 
 module.exports.TrueWalletAungPao = async (req, res) => {
-    const { aungPaoCode } = req.body
-    const receiver = process.env.RECEIVER
+    const { aungPaoCode, RECEIVER } = req.body
+    const receiver = RECEIVER || process.env.RECEIVER
 
     if (!aungPaoCode) {
         return res.status(400).json({
